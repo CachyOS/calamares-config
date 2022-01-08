@@ -48,7 +48,7 @@ windowExpanding:    normal
 # This setting is ignored if "fullscreen" is selected for
 # *windowExpanding*, above. If not set, use constants defined
 # in CalamaresUtilsGui, 800x520.
-windowSize: 1100px,520px
+windowSize: 1200px,700px
 
 # Placement of Calamares window. Either "center" or "free".
 # Whether "center" actually works does depend on the window
@@ -121,18 +121,13 @@ navigation: widget
 # are visible as buttons there if the corresponding *show* keys
 # are set to "true" (they can also be overridden).
 strings:
-    productName:         "@{NAME}"
+    productName:         CachyOS
     shortProductName:    CachyOS
-    version:             2021-03-12
-    #shortVersion:
+    version:             2022-01-10
+    shortVersion:        2022-01-10
     versionedName:       CachyOS
     shortVersionedName:  CachyOS
     bootloaderEntryName: CachyOS
-    #productUrl:          https://calamares.io/
-    #supportUrl:          https://github.com/calamares/calamares/wiki
-    #knownIssuesUrl:      https://github.com/calamares/calamares/issues
-    #releaseNotesUrl:     https://calamares.io/news/
-    #donateUrl:           https://kde.org/community/donations/index.php
 
 # These images are loaded from the branding module directory.
 #
@@ -162,11 +157,11 @@ strings:
 #
 # These filenames can also use substitutions from os-release (see above).
 images:
-    # productBanner:       "banner.png"
-    productIcon:         "install.png"
     productLogo:         "logo.png"
-    # productWallpaper:    "wallpaper.png"
-    productWelcome:      "icon.png"
+    productIcon:         "icon.png"
+    productWelcome:      "welcome.png"
+    # productBanner:      "banner.png"
+    # productWallpaper:   "wallpaper.png"
 
 # Colors for text and background components.
 #
@@ -182,11 +177,8 @@ images:
 style:
    sidebarBackground:    "#292F34"
    sidebarText:          "#FFFFFF"
-   sidebarTextSelect:    "#292F34"
+   sidebarTextSelect:    "#000000"
    sidebarTextHighlight: "#00CED1"
-   #sidebarTextHighlight: "#D35400"
-   #--strong orange
-   #sidebarTextHighlight: "#9b870c"
 
 ### SLIDESHOW
 #
