@@ -7,7 +7,8 @@
       - name: "CachyOS"
         description: "needed CachyOS packages"
         selected: true
-        packagees:
+        packages:
+           - cachyos
            - cachyos-mirrorlist
            - cachyos-v3-mirrorlist
            - cachyos-keyring
@@ -172,7 +173,7 @@
           - tlp
           - upower
           - cpupower
-      - name: "CachyOS applications selection"
+      - name: "Some applications selection"
         description: "General tools and applications"
         selected: true
         packages:
@@ -202,16 +203,14 @@
   packages:
     - linux-cachyos-cacule
     - linux-cachyos-cacule-headers
-    - linux-cachyos-cacule-rdb
-    - linux-cachy-cacule-rdb-headers
     - linux-cachyos-bmq
     - linux-cachyos-bmq-headers
     - linux-cachyos-pds
     - linux-cachyos-pds-headers
-    - linux-cachyos-baby
-    - linux-cachyos-baby-headers
-    - linux-cachyos-cacule-lts
-    - linux-cachyos-cacule-lts-headers
+    - linux-cachyos-tt
+    - linux-cachyos-tt-headers
+    - linux-cachyos-bore
+    - linux-cachyos-bore-headers
 - name: "NVIDIA Drivers"
   description: "Select them if you want to use the nvidia drivers"
   hidden: false
@@ -225,13 +224,6 @@
     - nvidia-settings
     - lib32-opencl-nvidia
     - opencl-nvidia
-- name: "NVIDIA Drivers BUG WORKAROUND"
-  description: "dbus blackhole for nvidia.powerd.server for working around a bug in nvidia-495 drivers."
-  hidden: false
-  selected: false
-  critical: true
-  packages:
-    - nvidia-fake-powerd
 - name: "XFCE4-Desktop"
   description: "XFCE4 - lightweight desktop fast and low on system resources, visually appealing and user friendly."
   hidden: false
@@ -404,6 +396,13 @@
     - xed
     - xfce4-terminal
     - xorg-xdpyinfo
+- name: "cutefish UI - based on KDE"
+  description: "The new mac os like DE based on KDE"
+  hidden: false
+  selected: false
+  critical: true
+  packages:
+    - cutefish
 - name: "LXQT-Desktop"
   description: "The Lightweight Qt Desktop Environment."
   hidden: false
