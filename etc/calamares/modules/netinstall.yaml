@@ -1,0 +1,474 @@
+- name: "Base-devel + Common packages"
+  description: "Recommended. Don't change unless you know what you're doing (generic)."
+  hidden: false
+  selected: true
+  critical: true
+  subgroups:
+      - name: "CachyOS"
+        description: "needed CachyOS packages"
+        selected: true
+        packagees:
+           - cachyos-mirrorlist
+           - cachyos-v3-mirrorlist
+           - cachyos-keyring
+           - cachyos-settings
+           - cachy-browser
+           - cachyos-fish-config
+           - grub-hook
+           - linux-cachyos
+           - linux-cachyos-headers
+      - name: "X-system"
+        description: "Default X-system"
+        selected: true
+        packages:
+           - libwnck3
+           - xf86-input-libinput
+           - xf86-video-fbdev
+           - xf86-video-vesa
+           - xorg-server
+           - xorg-xinit
+           - xorg-xinput
+           - xorg-xkill
+           - xorg-xrandr
+      - name: "GPU drivers"
+        description: "Graphics hardware drivers"
+        selected: true
+        packages:
+          - xf86-video-amdgpu
+          - xf86-video-ati
+          - xf86-video-intel
+      - name: "Network"
+        description: "Network apps drivers and tools"
+        selected: true
+        packages:
+          - b43-fwcutter
+          - broadcom-wl-dkms
+          - crda
+          - dhclient
+          - dialog
+          - dnsmasq
+          - dnsutils
+          - ethtool
+          - gnu-netcat
+          - ipw2100-fw
+          - ipw2200-fw
+          - iwd
+          - linux-atm
+          - modemmanager
+          - nbd
+          - ndisc6
+          - netctl
+          - net-tools
+          - networkmanager
+          - networkmanager-openvpn
+          - nmap
+          - nss-mdns
+          - ntfs-3g
+          - openconnect
+          - openvpn
+          - ppp
+          - pptpclient
+          - r8168-dkms
+          - rp-pppoe
+          - sshfs
+          - usb_modeswitch
+          - vpnc
+          - whois
+          - wireless-regdb
+          - wireless_tools
+          - wpa_supplicant
+          - wvdial
+          - xl2tpd
+      - name: "packages management"
+        description: "Packages tools"
+        selected: true
+        packages:
+          - pacman-contrib
+          - pkgfile
+          - rebuild-detector
+          - reflector
+          - yay
+          - libpamac-aur
+          - pamac-aur
+          - paru
+      - name: "desktop integration"
+        description: "Useful helper tools and libs for desktop usage"
+        selected: true
+        packages:
+          - accountsservice
+          - bash-completion
+          - ffmpegthumbnailer
+          - freetype2
+          - gst-libav
+          - gst-plugin-pipewire
+          - gst-plugins-bad
+          - gst-plugins-ugly
+          - libdvdcss
+          - libgsf
+          - libopenraw
+          - mlocate
+          - poppler-glib
+          - xdg-user-dirs
+          - xdg-utils
+      - name: "filesystem"
+        description: "Filesystem tools and apps"
+        selected: true
+        packages:
+          - efitools
+          - haveged
+          - nfs-utils
+          - nilfs-utils
+          - ntp
+          - smartmontools
+          - unrar
+          - unzip
+          - xz
+      - name: "fonts"
+        description: "CachyOS font selection"
+        selected: true
+        packages:
+          - adobe-source-han-sans-cn-fonts
+          - adobe-source-han-sans-jp-fonts
+          - adobe-source-han-sans-kr-fonts
+          - cantarell-fonts
+          - freetype2
+          - noto-fonts
+          - opendesktop-fonts
+          - ttf-bitstream-vera
+          - ttf-dejavu
+          - ttf-liberation
+          - ttf-opensans
+      - name: "audio"
+        description: "Audio handling tools apps and libs"
+        selected: true
+        packages:
+          - pipewire-media-session
+          - pipewire
+          - pipewire-alsa
+          - pipewire-jack
+          - pipewire-pulse
+          - pipewire-zeroconf
+          - gst-plugin-pipewire
+          - easyeffects
+      - name: "hardware"
+        description: "Hardware support libs and firmware"
+        selected: true
+        packages:
+          - amd-ucode
+          - dmidecode
+          - dmraid
+          - dosfstools
+          - hdparm
+          - hwdetect
+          - intel-ucode
+          - lsscsi
+          - mtools
+          - sg3_utils
+          - sof-firmware
+      - name: "power"
+        description: "Powermanagement support"
+        selected: true
+        packages:
+          - tlp
+          - upower
+          - cpupower
+      - name: "CachyOS applications selection"
+        description: "General tools and applications"
+        selected: true
+        packages:
+          - duf
+          - findutils
+          - firefox
+          - fsarchiver
+          - git
+          - glances
+          - hwinfo
+          - inxi
+          - meld
+          - nano-syntax-highlighting
+          - neofetch
+          - pcurses
+          - pv
+          - python-defusedxml
+          - rsync
+          - tldr
+          - sed
+          - wget
+- name: "CachyOS Kernels"
+  description: "Selection of different cachyos kernels"
+  hidden: false
+  selected: false
+  critical: true
+  packages:
+    - linux-cachyos-cacule
+    - linux-cachyos-cacule-headers
+    - linux-cachyos-cacule-rdb
+    - linux-cachy-cacule-rdb-headers
+    - linux-cachyos-bmq
+    - linux-cachyos-bmq-headers
+    - linux-cachyos-pds
+    - linux-cachyos-pds-headers
+    - linux-cachyos-baby
+    - linux-cachyos-baby-headers
+    - linux-cachyos-cacule-lts
+    - linux-cachyos-cacule-lts-headers
+- name: "NVIDIA Drivers"
+  description: "Select them if you want to use the nvidia drivers"
+  hidden: false
+  selected: false
+  critical: true
+  packages:
+    - nvidia
+    - nvidia-utils
+    - lib32-nvidia-utils
+    - nvidia-dkms
+    - nvidia-settings
+    - lib32-opencl-nvidia
+    - opencl-nvidia
+- name: "NVIDIA Drivers BUG WORKAROUND"
+  description: "dbus blackhole for nvidia.powerd.server for working around a bug in nvidia-495 drivers."
+  hidden: false
+  selected: false
+  critical: true
+  packages:
+    - nvidia-fake-powerd
+- name: "XFCE4-Desktop"
+  description: "XFCE4 - lightweight desktop fast and low on system resources, visually appealing and user friendly."
+  hidden: false
+  selected: false
+  expanded: false
+  critical: true
+  subgroups:
+      - name: "XFCE4 Desktop"
+        description: "XFCE4 needed packages"
+        selected: false
+        packages:
+         - file-roller
+         - galculator
+         - gvfs
+         - gvfs-afc
+         - gvfs-gphoto2
+         - gvfs-mtp
+         - gvfs-nfs
+         - gvfs-smb
+         - lightdm
+         - lightdm-gtk-greeter
+         - lightdm-gtk-greeter-settings
+         - network-manager-applet
+         - parole
+         - ristretto
+         - thunar-archive-plugin
+         - thunar-media-tags-plugin
+         - xdg-user-dirs-gtk
+         - xed
+         - xfce4
+         - xfce4-battery-plugin
+         - xfce4-datetime-plugin
+         - xfce4-mount-plugin
+         - xfce4-netload-plugin
+         - xfce4-notifyd
+         - xfce4-pulseaudio-plugin
+         - xfce4-screensaver
+         - xfce4-screenshooter
+         - xfce4-taskmanager
+         - xfce4-wavelan-plugin
+         - xfce4-weather-plugin
+         - xfce4-whiskermenu-plugin
+         - xfce4-xkb-plugin
+- name: "KDE-Desktop"
+  description: "KDE-Plasma Desktop - Simple by default, powerful when needed."
+  hidden: false
+  selected: false
+  critical: true
+  packages:
+    - char-white
+    - kwayland-integration
+    - plasma-wayland-protocols
+    - plasma-wayland-session
+    - kinfocenter
+    - cachyos-emerald-kde-theme-git
+    - cachyos-nord-kde-theme-git
+    - ark
+    - audiocd-kio
+    - breeze-gtk
+    - dolphin
+    - dragon
+    - gwenview
+    - kate
+    - kdeconnect
+    - kde-gtk-config
+    - khotkeys
+    - kinfocenter
+    - kinit
+    - kio-fuse
+    - konsole
+    - kscreen
+    - kwallet-pam
+    - okular
+    - plasma-desktop
+    - plasma-disks
+    - plasma-nm
+    - plasma-pa
+    - powerdevil
+    - print-manager
+    - sddm-kcm
+    - sddm
+    - solid
+    - egl-wayland
+    - spectacle
+    - xsettingsd
+- name: "GNOME-Desktop"
+  description: "GNOME Desktop - designed to put you in control and get things done."
+  hidden: false
+  selected: false
+  critical: true
+  packages:
+    - adwaita-icon-theme
+    - arc-x-icons-theme
+    - eog
+    - evince
+    - file-roller
+    - gdm
+    - gedit
+    - gnome-control-center
+    - gnome-disk-utility
+    - gnome-keyring
+    - gnome-nettool
+    - gnome-screenshot
+    - gnome-shell
+    - gnome-terminal
+    - gnome-themes-extra
+    - gnome-tweaks
+    - gnome-usage
+    - gvfs
+    - gvfs-afc
+    - gvfs-gphoto2
+    - gvfs-mtp
+    - gvfs-nfs
+    - gvfs-smb
+    - nautilus
+    - nautilus-sendto
+    - sushi
+    - totem
+    - xdg-user-dirs-gtk
+- name: "i3 Window Manager"
+  description: "i3 tiling window manager, primarily targeted at developers and advanced users."
+  hidden: false
+  selected: false
+  expanded: false
+  critical: true
+  packages:
+    - acpi
+    - arandr
+    - archlinux-xdg-menu
+    - arc-x-icons-theme
+    - awesome-terminal-fonts
+    - capitaine-cursors
+    - celluloid
+    - dex
+    - dmenu
+    - dunst
+    - file-roller
+    - galculator
+    - gthumb
+    - gtk-engine-murrine
+    - gvfs
+    - gvfs-afc
+    - gvfs-gphoto2
+    - gvfs-mtp
+    - gvfs-nfs
+    - gvfs-smb
+    - i3blocks
+    - i3-gaps
+    - i3lock
+    - i3status
+    - jq
+    - lightdm
+    - lightdm-gtk-greeter
+    - lightdm-gtk-greeter-settings
+    - lxappearance-gtk3
+    - network-manager-applet
+    - nitrogen
+    - numlockx
+    - picom
+    - polkit-gnome
+    - rofi
+    - scrot
+    - sysstat
+    - thunar
+    - thunar-archive-plugin
+    - thunar-volman
+    - tumbler
+    - xbindkeys
+    - xdg-user-dirs-gtk
+    - xed
+    - xfce4-terminal
+    - xorg-xdpyinfo
+- name: "LXQT-Desktop"
+  description: "The Lightweight Qt Desktop Environment."
+  hidden: false
+  selected: false
+  critical: true
+  packages:
+    - audiocd-kio
+    - baka-mplayer
+    - breeze
+    - breeze-gtk
+    - featherpad
+    - gvfs
+    - gvfs-mtp
+    - kio-fuse
+    - libpulse
+    - libstatgrab
+    - libsysstat
+    - lm_sensors
+    - lxqt
+    - lxqt-archiver
+    - network-manager-applet
+    - oxygen-icons
+    - pavucontrol-qt
+    - print-manager
+    - qt5-translations
+    - sddm
+    - xdg-utils
+    - xscreensaver
+    - xsettingsd
+- name: "Printing-Support"
+  description: "Support for printing (Cups)"
+  hidden: false
+  selected: false
+  critical: true
+  packages:
+    - cups
+    - cups-filters
+    - cups-pdf
+    - foomatic-db
+    - foomatic-db-engine
+    - foomatic-db-gutenprint-ppds
+    - foomatic-db-nonfree
+    - foomatic-db-nonfree-ppds
+    - foomatic-db-ppds
+    - ghostscript
+    - gsfonts
+    - gutenprint
+    - splix
+    - system-config-printer
+- name: "Support for HP Printer/Scanner"
+  description: "Extra Packages for HP Printer/Scanner"
+  hidden: false
+  selected: false
+  critical: true
+  packages:
+    - hplip
+    - python-pyqt5
+    - python-reportlab
+    - xsane
+- name: "Accessibility Tools"
+  description: "Screen reader and mouse tweaks (impaired vision)"
+  hidden: false
+  selected: false
+  critical: true
+  packages:
+    - espeak-ng
+    - mousetweaks
+    - orca
