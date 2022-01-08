@@ -46,20 +46,14 @@ QPushButton { background-color: green; }
  * delegate code.
  */
 
-#mainApp { }
 /*
+#mainApp { }
 #sidebarApp { }
 #logoApp { }
 */
 
-#sidebarMenuApp {
-    font: 18px;
-    padding-top: 30px;
-}
-
 QWidget {
-    font: 14px;
-    color: #000000;
+    font: 13px;
 }
 
 QDialogButtonBox {
@@ -87,8 +81,7 @@ QDialogButtonBox {
 
 #aboutButton {
     background-color: none;
-    font: 16px;
-    color: #000000;
+    font: 14px;
     border: none;
 }
 

@@ -29,69 +29,93 @@ Presentation
     }
 
     Slide {
+        anchors.fill: parent
+        anchors.verticalCenterOffset: 0
 
         Image {
             id: background1
             source: "slide1.png"
-            width: 1002; height: 651
-            fillMode: Image.PreserveAspectFit
-            anchors.centerIn: parent
+            width: parent.width; height: parent.height
+            horizontalAlignment: Image.AlignCenter
+            verticalAlignment: Image.AlignTop
+            fillMode: Image.Stretch
+            anchors.fill: parent
         }
     }
 
     Slide {
+        anchors.fill: parent
+        anchors.verticalCenterOffset: 0
 
         Image {
             id: background2
             source: "slide2.png"
-            width: 1002; height: 651
-            fillMode: Image.PreserveAspectFit
-            anchors.centerIn: parent
+            width: parent.width; height: parent.height
+            horizontalAlignment: Image.AlignCenter
+            verticalAlignment: Image.AlignTop
+            fillMode: Image.Stretch
+            anchors.fill: parent
         }
     }
 
 
     Slide {
+        anchors.fill: parent
+        anchors.verticalCenterOffset: 0
 
         Image {
             id: background3
             source: "slide3.png"
-            width: 1002; height: 651
-            fillMode: Image.PreserveAspectFit
-            anchors.centerIn: parent
+            width: parent.width; height: parent.height
+            horizontalAlignment: Image.AlignCenter
+            verticalAlignment: Image.AlignTop
+            fillMode: Image.Stretch
+            anchors.fill: parent
         }
     }
 
     Slide {
+        anchors.fill: parent
+        anchors.verticalCenterOffset: 0
 
         Image {
             id: background4
             source: "slide4.png"
-            width: 1002; height: 651
-            fillMode: Image.PreserveAspectFit
-            anchors.centerIn: parent
+            width: parent.width; height: parent.height
+            horizontalAlignment: Image.AlignCenter
+            verticalAlignment: Image.AlignTop
+            fillMode: Image.Stretch
+            anchors.fill: parent
         }
     }
 
     Slide {
+        anchors.fill: parent
+        anchors.verticalCenterOffset: 0
 
         Image {
             id: background5
             source: "slide5.png"
-            width: 1002; height: 651
-            fillMode: Image.PreserveAspectFit
-            anchors.centerIn: parent
+            width: parent.width; height: parent.height
+            horizontalAlignment: Image.AlignCenter
+            verticalAlignment: Image.AlignTop
+            fillMode: Image.Stretch
+            anchors.fill: parent
         }
     }
 
     Slide {
+        anchors.fill: parent
+        anchors.verticalCenterOffset: 0
 
         Image {
             id: background6
             source: "slide6.png"
-            width: 1002; height: 651
-            fillMode: Image.PreserveAspectFit
-            anchors.centerIn: parent
+            width: parent.width; height: parent.height
+            horizontalAlignment: Image.AlignCenter
+            verticalAlignment: Image.AlignTop
+            fillMode: Image.Stretch
+            anchors.fill: parent
         }
     }
 

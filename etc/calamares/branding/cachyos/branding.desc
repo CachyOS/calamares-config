@@ -48,7 +48,7 @@ windowExpanding:    normal
 # This setting is ignored if "fullscreen" is selected for
 # *windowExpanding*, above. If not set, use constants defined
 # in CalamaresUtilsGui, 800x520.
-windowSize: 1200px,700px
+windowSize: 1100px,520px
 
 # Placement of Calamares window. Either "center" or "free".
 # Whether "center" actually works does depend on the window
@@ -177,7 +177,7 @@ images:
 style:
    sidebarBackground:    "#292F34"
    sidebarText:          "#FFFFFF"
-   sidebarTextSelect:    "#000000"
+   sidebarTextSelect:    "#292F34"
    sidebarTextHighlight: "#00CED1"
 
 ### SLIDESHOW
