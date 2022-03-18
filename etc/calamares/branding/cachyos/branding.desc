@@ -123,8 +123,8 @@ navigation: widget
 strings:
     productName:         CachyOS
     shortProductName:    CachyOS
-    version:             2022-01-10
-    shortVersion:        2022-01-10
+    version:             2022-03-10
+    shortVersion:        2022-03-10
     versionedName:       CachyOS
     shortVersionedName:  CachyOS
     bootloaderEntryName: CachyOS
@@ -213,4 +213,8 @@ slideshow:               "show.qml"
 # An image slideshow does not need to have the API defined.
 slideshowAPI: 2
 
-
+# log feature
+uploadServer :
+    type :    "fiche"
+    url :     "http://termbin.com:9999"
+    sizeLimit : -1
