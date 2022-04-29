@@ -239,6 +239,18 @@
     - linux-cachyos-tt-headers
     - linux-cachyos-bore
     - linux-cachyos-bore-headers
+- name: "CachyOS Kernels - ZFS"
+  description: "Install if you select if you choosed the zfs filesystem!"
+  hidden: false
+  selected: false
+  critical: true
+  packages:
+ 	- linux-cachyos-zfs
+ 	- linux-cachyos-bmq-zfs
+    - linux-cachyos-bore-zfs
+    - linux-cachyos-cacule-zfs
+    - linux-cachyos-pds-zfs
+    - linux-cachyos-tt-zfs
 - name: "NVIDIA Drivers"
   description: "Select them if you want to use the nvidia drivers"
   hidden: false
