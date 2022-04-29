@@ -245,8 +245,8 @@
   selected: false
   critical: true
   packages:
- 	- linux-cachyos-zfs
- 	- linux-cachyos-bmq-zfs
+    - linux-cachyos-zfs
+    - linux-cachyos-bmq-zfs
     - linux-cachyos-bore-zfs
     - linux-cachyos-cacule-zfs
     - linux-cachyos-pds-zfs
