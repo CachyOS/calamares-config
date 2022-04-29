@@ -143,6 +143,19 @@
           - ttf-dejavu
           - ttf-liberation
           - ttf-opensans
+      - name: "firewall"
+        description: "Firewall support"
+        selected: true
+        packages:
+          - firewalld
+          - python-pyqt5
+          - python-capng
+      - name: "bluetooth"
+        description: "Bluetooth support"
+        selected: true
+        packages:
+          - bluez
+          - bluez-utils
       - name: "audio"
         description: "Audio handling tools apps and libs"
         selected: true
@@ -239,6 +252,13 @@
     - nvidia-settings
     - lib32-opencl-nvidia
     - opencl-nvidia
+- name: "cachyos-gaming-meta"
+  description: "Install needed packages for a instant gaming enviroment"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+    - cachyos-gaming-meta
 - name: "Printing-Support"
   description: "Support for printing (Cups)"
   hidden: false
