@@ -20,7 +20,7 @@
      - cachyos-hooks
      - cachyos-settings
      - cachyos-rate-mirrors
-
+     - cachyos-zsh-config
 - name: "Base-devel + Common packages"
   description: "Recommended. Don't change unless you know what you're doing (generic)."
   hidden: false
@@ -245,6 +245,8 @@
   selected: false
   critical: true
   packages:
+    - zfs-utils
+    - zfs-dkms
     - linux-cachyos-zfs
     - linux-cachyos-bmq-zfs
     - linux-cachyos-bore-zfs
@@ -268,7 +270,7 @@
   description: "Install needed packages for a instant gaming enviroment"
   hidden: false
   selected: false
-  critical: false
+  critical: true
   packages:
     - cachyos-gaming-meta
 - name: "Printing-Support"
