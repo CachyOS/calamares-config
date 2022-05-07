@@ -22,6 +22,10 @@
      - linux-cachyos-headers
      - mhwd-cachyos
      - vim
+     - nano
+     - micro
+     - alacritty
+     - btop
 - name: "Base-devel + Common packages"
   description: "Recommended. Don't change unless you know what you're doing (generic)."
   hidden: false
@@ -41,6 +45,13 @@
            - xorg-xinput
            - xorg-xkill
            - xorg-xrandr
+           - xorg-xbacklight
+           - xorg-xdpyinfo
+           - xorg-server
+           - xorg-xinit
+           - xorg-xinput
+           - xorg-xkill
+           - xorg-xrandr
       - name: "GPU drivers"
         description: "Graphics hardware drivers"
         selected: true
@@ -48,6 +59,9 @@
           - xf86-video-amdgpu
           - xf86-video-ati
           - xf86-video-intel
+          - xf86-input-libinput
+          - xf86-video-fbdev
+          - xf86-video-vesa
       - name: "Network"
         description: "Network apps drivers and tools"
         selected: true
@@ -237,21 +251,7 @@
     - cutefish-wallpapers
     - cutefish-icons
     - cutefish-qt-plugins
-    - alacritty
-    - openssh
-    - btop
     - libwnck3
-    - xf86-input-libinput
-    - xf86-video-fbdev
-    - xf86-video-vesa
-    - xorg-server
-    - xorg-xinit
-    - xorg-xinput
-    - xorg-xkill
-    - xorg-xrandr
-    - xf86-video-amdgpu
-    - xf86-video-ati
-    - xf86-video-intel
 - name: "i3-Window-Manager"
   description: "i3 tiling window manager, primarily targeted at developers and advanced users."
   hidden: false
@@ -274,17 +274,6 @@
     - btop
     - paru
     - libwnck3
-    - xf86-input-libinput
-    - xf86-video-fbdev
-    - xf86-video-vesa
-    - xorg-server
-    - xorg-xinit
-    - xorg-xinput
-    - xorg-xkill
-    - xorg-xrandr
-    - xf86-video-amdgpu
-    - xf86-video-ati
-    - xf86-video-intel
 - name: "KDE-Desktop"
   description: "KDE-Plasma Desktop - Simple by default, powerful when needed."
   hidden: false
@@ -419,19 +408,6 @@
     - xdg-user-dirs-gtk
     - xed
     - xfce4-terminal
-    - xorg-xbacklight
-    - xorg-xdpyinfo
-    - xf86-input-libinput
-    - xf86-video-fbdev
-    - xf86-video-vesa
-    - xorg-server
-    - xorg-xinit
-    - xorg-xinput
-    - xorg-xkill
-    - xorg-xrandr
-    - xf86-video-amdgpu
-    - xf86-video-ati
-    - xf86-video-intel
 - name: "Wayfire"
   description: "Wayfire is a wayland compositor based on wlroots. It aims to create a customizable, extendable and lightweight environment without sacrificing its appearance."
   hidden: false
@@ -445,9 +421,6 @@
     - wf-shell
     - wf-recorder
     - nwg-drawer
-    - alacritty
-    - openssh
-    - btop
 - name: "LXQT-Desktop"
   description: "The Lightweight Qt Desktop Environment."
   hidden: false
@@ -490,17 +463,6 @@
     - openssh
     - btop
     - libwnck3
-    - xf86-input-libinput
-    - xf86-video-fbdev
-    - xf86-video-vesa
-    - xorg-server
-    - xorg-xinit
-    - xorg-xinput
-    - xorg-xkill
-    - xorg-xrandr
-    - xf86-video-amdgpu
-    - xf86-video-ati
-    - xf86-video-intel
 - name: "kofuku"
   description: "Kofuku (bliss in Japanese) is a lightweight and minimalist Linux setup. This setup uses BSPWM as the tiling window manager."
   hidden: false
@@ -515,21 +477,7 @@
     - rofi
     - lightdm-webkit2-greeter
     - cachyos-kofuku
-    - alacritty
-    - openssh
-    - btop
     - libwnck3
-    - xf86-input-libinput
-    - xf86-video-fbdev
-    - xf86-video-vesa
-    - xorg-server
-    - xorg-xinit
-    - xorg-xinput
-    - xorg-xkill
-    - xorg-xrandr
-    - xf86-video-amdgpu
-    - xf86-video-ati
-    - xf86-video-intel
 - name: "sway"
   description: "Sway is a tiling Wayland compositor and a drop-in replacement for the i3 window manager for X11. It works with your existing i3 configuration and supports most of i3's features, plus a few extras."
   hidden: false
@@ -588,20 +536,7 @@
     - xfce4-whiskermenu-plugin
     - xfce4-xkb-plugin
     - cachyos-xfce-settings
-    - alacritty
-    - btop
     - libwnck3
-    - xf86-input-libinput
-    - xf86-video-fbdev
-    - xf86-video-vesa
-    - xorg-server
-    - xorg-xinit
-    - xorg-xinput
-    - xorg-xkill
-    - xorg-xrandr
-    - xf86-video-amdgpu
-    - xf86-video-ati
-    - xf86-video-intel
 - name: "Firefox and language package"
   description: "Add firefox and language pack if possible"
   hidden: false
