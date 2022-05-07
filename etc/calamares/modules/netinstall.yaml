@@ -4,23 +4,24 @@
   selected: true
   critical: true
   packages:
-     - cachyos
      - cachyos-mirrorlist
      - cachyos-v3-mirrorlist
      - cachyos-keyring
      - cachyos-settings
      - cachyos-fish-config
      - cachy-browser
-     - grub-hook
-     - linux-cachyos
-     - linux-cachyos-headers
-     - mhwd-cachyos
-     - vim
      - cachyos-hello
      - cachyos-hooks
      - cachyos-settings
      - cachyos-rate-mirrors
      - cachyos-zsh-config
+     - cachyos-kernel-manager
+     - nerd-fonts-meslo
+     - grub-hook
+     - linux-cachyos
+     - linux-cachyos-headers
+     - mhwd-cachyos
+     - vim
 - name: "Base-devel + Common packages"
   description: "Recommended. Don't change unless you know what you're doing (generic)."
   hidden: false
@@ -322,6 +323,9 @@
     - pamac-aur
     - octopi
     - paru
+    - cachyos-nord-kde-theme-git
+    - cachyos-lavender-kde
+    - cachyos-iridescent-kde
     - cachyos-kde-settings
     - spectacle
     - xsettingsd
