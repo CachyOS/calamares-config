@@ -517,7 +517,7 @@
     - xf86-input-libinput
     - xf86-video-fbdev
     - xf86-video-vesa
-- name: "kofuku"
+- name: "Kofuku"
   description: "Kofuku (bliss in Japanese) is a lightweight and minimalist Linux setup. This setup uses BSPWM as the tiling window manager."
   hidden: false
   selected: false
@@ -547,7 +547,7 @@
     - xf86-input-libinput
     - xf86-video-fbdev
     - xf86-video-vesa
-- name: "sway"
+- name: "Sway"
   description: "Sway is a tiling Wayland compositor and a drop-in replacement for the i3 window manager for X11. It works with your existing i3 configuration and supports most of i3's features, plus a few extras."
   hidden: false
   selected: false
@@ -563,7 +563,7 @@
     - wofi
     - xorg-xhost
     - xorg-xwayland
-- name: "xfce"
+- name: "Xfce"
   description: "Xfce is a lightweight desktop environment for UNIX-like operating systems. It aims to be fast and low on system resources, while still being visually appealing and user friendly."
   hidden: false
   selected: false
