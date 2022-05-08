@@ -32,36 +32,6 @@
   selected: true
   critical: true
   subgroups:
-      - name: "X-system"
-        description: "Default X-system"
-        selected: true
-        packages:
-           - libwnck3
-           - mesa-utils
-           - xf86-input-libinput
-           - xorg-xdpyinfo
-           - xorg-server
-           - xorg-xinit
-           - xorg-xinput
-           - xorg-xkill
-           - xorg-xrandr
-           - xorg-xbacklight
-           - xorg-xdpyinfo
-           - xorg-server
-           - xorg-xinit
-           - xorg-xinput
-           - xorg-xkill
-           - xorg-xrandr
-      - name: "GPU drivers"
-        description: "Graphics hardware drivers"
-        selected: true
-        packages:
-          - xf86-video-amdgpu
-          - xf86-video-ati
-          - xf86-video-intel
-          - xf86-input-libinput
-          - xf86-video-fbdev
-          - xf86-video-vesa
       - name: "Network"
         description: "Network apps drivers and tools"
         selected: true
@@ -130,6 +100,7 @@
           - poppler-glib
           - xdg-user-dirs
           - xdg-utils
+          - mesa-utils
       - name: "filesystem"
         description: "Filesystem tools and apps"
         selected: true
@@ -252,6 +223,21 @@
     - cutefish-icons
     - cutefish-qt-plugins
     - libwnck3
+    - xf86-input-libinput
+    - xorg-xdpyinfo
+    - xorg-server
+    - xorg-xinit
+    - xorg-xinput
+    - xorg-xkill
+    - xorg-xrandr
+    - xorg-xbacklight
+    - xorg-xdpyinfo
+    - xf86-video-amdgpu
+    - xf86-video-ati
+    - xf86-video-intel
+    - xf86-input-libinput
+    - xf86-video-fbdev
+    - xf86-video-vesa
 - name: "i3-Window-Manager"
   description: "i3 tiling window manager, primarily targeted at developers and advanced users."
   hidden: false
@@ -269,11 +255,22 @@
     - cachyos-picom-config
     - dunst
     - cachyos-i3wm-settings
-    - alacritty
-    - openssh
-    - btop
-    - paru
     - libwnck3
+    - xf86-input-libinput
+    - xorg-xdpyinfo
+    - xorg-server
+    - xorg-xinit
+    - xorg-xinput
+    - xorg-xkill
+    - xorg-xrandr
+    - xorg-xbacklight
+    - xorg-xdpyinfo
+    - xf86-video-amdgpu
+    - xf86-video-ati
+    - xf86-video-intel
+    - xf86-input-libinput
+    - xf86-video-fbdev
+    - xf86-video-vesa
 - name: "KDE-Desktop"
   description: "KDE-Plasma Desktop - Simple by default, powerful when needed."
   hidden: false
@@ -281,8 +278,23 @@
   critical: true
   packages:
     - ark
-    - alacritty
     - audiocd-kio
+    - cachyos-nord-kde-theme-git
+    - cachyos-lavender-kde-theme-git
+    - cachyos-iridescent-kde
+    - cachyos-kde-settings
+    - dolphin
+    - egl-wayland
+    - konsole
+    - kate
+    - kscreen
+    - kde-gtk-config
+    - kinit
+    - kinfocenter
+    - khotkeys
+    - plasma
+    - plasma-wayland-protocols
+    - plasma-wayland-session
     - plasma-desktop
     - plasma-framework
     - plasma-nm
@@ -293,30 +305,29 @@
     - plasma-browser-integration
     - plasma-systemmonitor
     - plasma-thunderbolt
-    - konsole
-    - kate
-    - kscreen
-    - kde-gtk-config
-    - kinit
-    - kinfocenter
-    - khotkeys
-    - dolphin
-    - sddm
-    - sddm-kcm
-    - plasma
-    - plasma-wayland-protocols
-    - plasma-wayland-session
-    - gamemode
-    - lib32-gamemode
     - ksysguard
     - pamac-aur
     - octopi
-    - paru
-    - cachyos-nord-kde-theme-git
-    - cachyos-lavender-kde-theme-git
-    - cachyos-iridescent-kde
-    - cachyos-kde-settings
     - spectacle
+    - sddm
+    - sddm-kcm
+    - libwnck3
+    - xf86-input-libinput
+    - xorg-xdpyinfo
+    - xorg-server
+    - xorg-xinit
+    - xorg-xinput
+    - xorg-xkill
+    - xorg-xrandr
+    - xorg-xbacklight
+    - xorg-xdpyinfo
+    - xf86-video-amdgpu
+    - xf86-video-ati
+    - xf86-video-intel
+    - xf86-input-libinput
+    - xf86-video-fbdev
+    - xf86-video-vesa
+    - xorg-xwayland
     - xsettingsd
 - name: "GNOME-Desktop"
   description: "GNOME Desktop - designed to put you in control and get things done."
@@ -353,6 +364,22 @@
     - sushi
     - totem
     - xdg-user-dirs-gtk
+    - libwnck3
+    - xf86-input-libinput
+    - xorg-xdpyinfo
+    - xorg-server
+    - xorg-xinit
+    - xorg-xinput
+    - xorg-xkill
+    - xorg-xrandr
+    - xorg-xbacklight
+    - xorg-xdpyinfo
+    - xf86-video-amdgpu
+    - xf86-video-ati
+    - xf86-video-intel
+    - xf86-input-libinput
+    - xf86-video-fbdev
+    - xf86-video-vesa
 - name: "Openbox"
   description: "Openbox is a highly configurable, floating window manager with extensive standards support."
   hidden: false
@@ -360,10 +387,6 @@
   critical: true
   packages:
     - obconf
-    - alacritty
-    - openssh
-    - btop
-    - paru
     - libwnck3
     - acpi
     - arandr
@@ -408,6 +431,22 @@
     - xdg-user-dirs-gtk
     - xed
     - xfce4-terminal
+    - libwnck3
+    - xf86-input-libinput
+    - xorg-xdpyinfo
+    - xorg-server
+    - xorg-xinit
+    - xorg-xinput
+    - xorg-xkill
+    - xorg-xrandr
+    - xorg-xbacklight
+    - xorg-xdpyinfo
+    - xf86-video-amdgpu
+    - xf86-video-ati
+    - xf86-video-intel
+    - xf86-input-libinput
+    - xf86-video-fbdev
+    - xf86-video-vesa
 - name: "Wayfire"
   description: "Wayfire is a wayland compositor based on wlroots. It aims to create a customizable, extendable and lightweight environment without sacrificing its appearance."
   hidden: false
@@ -463,6 +502,21 @@
     - openssh
     - btop
     - libwnck3
+    - xf86-input-libinput
+    - xorg-xdpyinfo
+    - xorg-server
+    - xorg-xinit
+    - xorg-xinput
+    - xorg-xkill
+    - xorg-xrandr
+    - xorg-xbacklight
+    - xorg-xdpyinfo
+    - xf86-video-amdgpu
+    - xf86-video-ati
+    - xf86-video-intel
+    - xf86-input-libinput
+    - xf86-video-fbdev
+    - xf86-video-vesa
 - name: "kofuku"
   description: "Kofuku (bliss in Japanese) is a lightweight and minimalist Linux setup. This setup uses BSPWM as the tiling window manager."
   hidden: false
@@ -478,6 +532,21 @@
     - lightdm-webkit2-greeter
     - cachyos-kofuku
     - libwnck3
+    - xf86-input-libinput
+    - xorg-xdpyinfo
+    - xorg-server
+    - xorg-xinit
+    - xorg-xinput
+    - xorg-xkill
+    - xorg-xrandr
+    - xorg-xbacklight
+    - xorg-xdpyinfo
+    - xf86-video-amdgpu
+    - xf86-video-ati
+    - xf86-video-intel
+    - xf86-input-libinput
+    - xf86-video-fbdev
+    - xf86-video-vesa
 - name: "sway"
   description: "Sway is a tiling Wayland compositor and a drop-in replacement for the i3 window manager for X11. It works with your existing i3 configuration and supports most of i3's features, plus a few extras."
   hidden: false
@@ -486,9 +555,6 @@
   packages:
     - sway
     - waybar
-    - alacritty
-    - openssh
-    - btop
     - wl-clipboard
     - egl-wayland
     - waybar
@@ -537,6 +603,21 @@
     - xfce4-xkb-plugin
     - cachyos-xfce-settings
     - libwnck3
+    - xf86-input-libinput
+    - xorg-xdpyinfo
+    - xorg-server
+    - xorg-xinit
+    - xorg-xinput
+    - xorg-xkill
+    - xorg-xrandr
+    - xorg-xbacklight
+    - xorg-xdpyinfo
+    - xf86-video-amdgpu
+    - xf86-video-ati
+    - xf86-video-intel
+    - xf86-input-libinput
+    - xf86-video-fbdev
+    - xf86-video-vesa
 - name: "Firefox and language package"
   description: "Add firefox and language pack if possible"
   hidden: false
@@ -595,6 +676,8 @@
   critical: true
   packages:
     - cachyos-gaming-meta
+    - gamemode
+    - lib32-gamemode
 - name: "Printing-Support"
   description: "Support for printing (Cups)"
   hidden: false
