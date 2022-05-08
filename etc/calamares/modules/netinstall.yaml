@@ -201,6 +201,8 @@
           - sed
           - vi
           - wget
+          - snapper
+          - timeshift
 - name: "CuteFish"
   description: "CuteFish – An Elegant, Beautiful and Easy-to-Use Linux Desktop."
   hidden: false
