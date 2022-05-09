@@ -634,16 +634,16 @@
   selected: false
   critical: true
   packages:
-    - linux-cachyos-cacule
-    - linux-cachyos-cacule-headers
     - linux-cachyos-bmq
     - linux-cachyos-bmq-headers
+    - linux-cachyos-bore
+    - linux-cachyos-bore-headers
+    - linux-cachyos-cacule
+    - linux-cachyos-cacule-headers
     - linux-cachyos-pds
     - linux-cachyos-pds-headers
     - linux-cachyos-tt
     - linux-cachyos-tt-headers
-    - linux-cachyos-bore
-    - linux-cachyos-bore-headers
 - name: "CachyOS Kernels - ZFS"
   description: "Install if you select if you choosed the zfs filesystem!"
   hidden: false
