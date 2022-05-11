@@ -4,28 +4,28 @@
   selected: true
   critical: true
   packages:
-     - cachyos-mirrorlist
-     - cachyos-v3-mirrorlist
-     - cachyos-keyring
-     - cachyos-settings
-     - cachyos-fish-config
+     - alacritty
+     - btop
      - cachy-browser
+     - cachyos-fish-config
      - cachyos-hello
      - cachyos-hooks
-     - cachyos-settings
-     - cachyos-rate-mirrors
-     - cachyos-zsh-config
      - cachyos-kernel-manager
-     - nerd-fonts-meslo
+     - cachyos-keyring
+     - cachyos-mirrorlist
+     - cachyos-rate-mirrors
+     - cachyos-settings
+     - cachyos-v3-mirrorlist
+     - cachyos-zsh-config
      - grub-hook
      - linux-cachyos
      - linux-cachyos-headers
      - mhwd-cachyos
-     - vim
-     - nano
+     - mhwd-nvidia-390xx
      - micro
-     - alacritty
-     - btop
+     - nano
+     - nerd-fonts-meslo
+     - vim
 - name: "Base-devel + Common packages"
   description: "Recommended. Don't change unless you know what you're doing (generic)."
   hidden: false
@@ -50,8 +50,8 @@
           - modemmanager
           - nbd
           - ndisc6
-          - netctl
           - net-tools
+          - netctl
           - networkmanager
           - networkmanager-openvpn
           - nmap
@@ -74,14 +74,14 @@
         description: "Packages tools"
         selected: true
         packages:
+          - libpamac-aur
           - pacman-contrib
+          - pamac-aur
+          - paru
           - pkgfile
           - rebuild-detector
           - reflector
           - yay
-          - libpamac-aur
-          - pamac-aur
-          - paru
       - name: "desktop integration"
         description: "Useful helper tools and libs for desktop usage"
         selected: true
@@ -96,11 +96,11 @@
           - libdvdcss
           - libgsf
           - libopenraw
+          - mesa-utils
           - mlocate
           - poppler-glib
           - xdg-user-dirs
           - xdg-utils
-          - mesa-utils
       - name: "filesystem"
         description: "Filesystem tools and apps"
         selected: true
@@ -134,8 +134,8 @@
         selected: true
         packages:
           - firewalld
-          - python-pyqt5
           - python-capng
+          - python-pyqt5
       - name: "bluetooth"
         description: "Bluetooth support"
         selected: true
@@ -149,15 +149,15 @@
           - alsa-firmware
           - alsa-plugins
           - alsa-utils
+          - easyeffects
+          - gst-plugin-pipewire
           - pavucontrol
-          - pipewire-media-session
           - pipewire
           - pipewire-alsa
           - pipewire-jack
           - pipewire-pulse
           - pipewire-zeroconf
-          - gst-plugin-pipewire
-          - easyeffects
+          - wireplumber
       - name: "hardware"
         description: "Hardware support libs and firmware"
         selected: true
@@ -176,9 +176,9 @@
         description: "Powermanagement support"
         selected: true
         packages:
+          - cpupower
           - power-profiles-daemon
           - upower
-          - cpupower
       - name: "Some applications selection"
         description: "General tools and applications"
         selected: true
@@ -199,10 +199,10 @@
           - python-packaging
           - rsync
           - sed
-          - vi
-          - wget
           - snapper
           - timeshift
+          - vi
+          - wget
 - name: "CuteFish"
   description: "CuteFish – An Elegant, Beautiful and Easy-to-Use Linux Desktop."
   hidden: false
