@@ -92,7 +92,7 @@ def run():
         return "No configuration found", "Aborting due to missing configuration"
 
     zfs_pool_info = libcalamares.globalstorage.value("zfsPoolInfo")
-    if (list(zfs_pool_info) > 0):
+    if (len(zfs_pool_info) > 0):
         base_packages += ["zfs-utils", "linux-cachyos-zfs"]
 
     # run the pacstrap
