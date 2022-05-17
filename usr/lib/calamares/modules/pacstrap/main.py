@@ -65,6 +65,9 @@ def run_in_host(command, line_func):
     if proc.returncode != 0:
         raise PacmanError("Failed to run pacman")
 
+def edit_mkinitcpio_zfs(filename):
+    with open(filename, 'r') as file:
+        libcalamares.utils.debug("pacstrap: " + file.read())
 
 def run():
     """
@@ -91,8 +94,11 @@ def run():
     else:
         return "No configuration found", "Aborting due to missing configuration"
 
-    zfs_pool_info = libcalamares.globalstorage.value("zfsPoolInfo")
-    if (len(zfs_pool_info) > 0):
+    curr_filesystem = subprocess.run(["findmnt", "-ln", "-o", "FSTYPE", root_mount_point], stdout=subprocess.PIPE).stdout.decode('utf-8')
+    libcalamares.utils.debug("Current filesystem: {!s}".format(curr_filesystem))
+    is_root_on_zfs = (curr_filesystem == "zfs\n")
+
+    if (is_root_on_zfs):
         base_packages += ["zfs-utils", "linux-cachyos-zfs"]
 
     # run the pacstrap
@@ -115,6 +121,8 @@ def run():
                     dest = os.path.normpath(root_mount_point + source_file)
                     os.makedirs(os.path.dirname(dest), exist_ok=True)
                     shutil.copy2(source_file, dest)
+                    #if (is_root_on_zfs):
+                    #edit_mkinitcpio_zfs(dest)
                 except Exception as e:
                     libcalamares.utils.warning("Failed to copy file {!s}, error {!s}".format(source_file, e))
 
