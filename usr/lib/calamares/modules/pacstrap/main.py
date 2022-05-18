@@ -65,9 +65,6 @@ def run_in_host(command, line_func):
     if proc.returncode != 0:
         raise PacmanError("Failed to run pacman")
 
-def edit_mkinitcpio_zfs(filename):
-    with open(filename, 'r') as file:
-        libcalamares.utils.debug("pacstrap: " + file.read())
 
 def run():
     """
@@ -121,8 +118,6 @@ def run():
                     dest = os.path.normpath(root_mount_point + source_file)
                     os.makedirs(os.path.dirname(dest), exist_ok=True)
                     shutil.copy2(source_file, dest)
-                    #if (is_root_on_zfs):
-                    #edit_mkinitcpio_zfs(dest)
                 except Exception as e:
                     libcalamares.utils.warning("Failed to copy file {!s}, error {!s}".format(source_file, e))
 
