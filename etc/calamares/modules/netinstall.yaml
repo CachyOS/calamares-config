@@ -645,19 +645,18 @@
     - linux-cachyos-tt
     - linux-cachyos-tt-headers
 - name: "CachyOS Kernels - ZFS"
-  description: "Install if you select if you choosed the zfs filesystem!"
+  description: "Select cachyos-zfs if youre installing on a zfs filesystem!"
   hidden: false
   selected: false
   critical: true
   packages:
-    - zfs-utils
-    - zfs-dkms
-    - linux-cachyos-zfs
+    - cachyos-zfs
     - linux-cachyos-bmq-zfs
     - linux-cachyos-bore-zfs
     - linux-cachyos-cacule-zfs
     - linux-cachyos-pds-zfs
     - linux-cachyos-tt-zfs
+    - zfs-dkms
 - name: "NVIDIA Drivers"
   description: "Select them if you want to use the nvidia drivers"
   hidden: false
