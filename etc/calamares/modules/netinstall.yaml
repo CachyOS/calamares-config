@@ -157,7 +157,7 @@
           - pipewire-jack
           - pipewire-pulse
           - pipewire-zeroconf
-          - wireplumber
+          - pipewire-media-session
       - name: "hardware"
         description: "Hardware support libs and firmware"
         selected: true
