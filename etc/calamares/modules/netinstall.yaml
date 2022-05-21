@@ -193,6 +193,7 @@
           - meld
           - nano-syntax-highlighting
           - neofetch
+          - fastfetch-git
           - pcurses
           - pv
           - python-defusedxml
@@ -203,6 +204,35 @@
           - timeshift
           - vi
           - wget
+- name: "CachyOS - ZFS"
+  description: "Select cachyos-zfs if youre installing on a zfs filesystem!"
+  hidden: false
+  selected: false
+  critical: true
+  packages:
+    - cachyos-zfs
+    - linux-cachyos-bmq-zfs
+    - linux-cachyos-bore-zfs
+    - linux-cachyos-cacule-zfs
+    - linux-cachyos-pds-zfs
+    - linux-cachyos-tt-zfs
+    - zfs-dkms
+- name: "CachyOS Kernels"
+  description: "Selection of different cachyos kernels"
+  hidden: false
+  selected: false
+  critical: true
+  packages:
+    - linux-cachyos-bmq
+    - linux-cachyos-bmq-headers
+    - linux-cachyos-bore
+    - linux-cachyos-bore-headers
+    - linux-cachyos-cacule
+    - linux-cachyos-cacule-headers
+    - linux-cachyos-pds
+    - linux-cachyos-pds-headers
+    - linux-cachyos-tt
+    - linux-cachyos-tt-headers
 - name: "CuteFish"
   description: "CuteFish – An Elegant, Beautiful and Easy-to-Use Linux Desktop."
   hidden: false
@@ -628,35 +658,6 @@
   packages:
     - firefox
     - firefox-i18n-$LOCALE
-- name: "CachyOS Kernels"
-  description: "Selection of different cachyos kernels"
-  hidden: false
-  selected: false
-  critical: true
-  packages:
-    - linux-cachyos-bmq
-    - linux-cachyos-bmq-headers
-    - linux-cachyos-bore
-    - linux-cachyos-bore-headers
-    - linux-cachyos-cacule
-    - linux-cachyos-cacule-headers
-    - linux-cachyos-pds
-    - linux-cachyos-pds-headers
-    - linux-cachyos-tt
-    - linux-cachyos-tt-headers
-- name: "CachyOS Kernels - ZFS"
-  description: "Select cachyos-zfs if youre installing on a zfs filesystem!"
-  hidden: false
-  selected: false
-  critical: true
-  packages:
-    - cachyos-zfs
-    - linux-cachyos-bmq-zfs
-    - linux-cachyos-bore-zfs
-    - linux-cachyos-cacule-zfs
-    - linux-cachyos-pds-zfs
-    - linux-cachyos-tt-zfs
-    - zfs-dkms
 - name: "NVIDIA Drivers"
   description: "Select them if you want to use the nvidia drivers"
   hidden: false
