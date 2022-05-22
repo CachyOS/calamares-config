@@ -211,12 +211,17 @@
   critical: true
   packages:
     - cachyos-zfs
+- name: "CachyOS - ZFS - Kernels"
+  description: "Kernel ZFS built in modules are needed for the zfs filesystem and their kernel"
+  hidden: false
+  selected: false
+  critical: true
+  packages:
     - linux-cachyos-bmq-zfs
     - linux-cachyos-bore-zfs
     - linux-cachyos-cacule-zfs
     - linux-cachyos-pds-zfs
     - linux-cachyos-tt-zfs
-    - zfs-dkms
 - name: "CachyOS Kernels"
   description: "Selection of different cachyos kernels"
   hidden: false
@@ -664,7 +669,6 @@
   selected: false
   critical: true
   packages:
-    - nvidia
     - nvidia-utils
     - lib32-nvidia-utils
     - nvidia-dkms
