@@ -5,7 +5,7 @@ pacman_conf_cachyos="/etc/pacman-more.conf"
 pacman_conf_path_backup="/etc/pacman.conf.bak"
 check_v3="$(/lib/ld-linux-x86-64.so.2 --help | grep 'x86-64-v3 (' | awk '{print $1}')"
 
-if [ $check_v3 == "x86-64-v4" ]
+if [ $check_v3 == "x86-64-v3" ]
 	then
     	echo "x86-64-v3 is supported"
 
