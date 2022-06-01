@@ -13,4 +13,8 @@ echo "CachyOS -v3 Repo changed"
 mv $pacman_conf_cachyos $pacman_conf
 else
 echo "x86-64-v3 is not supported"
+echo "backup old config"
+mv $pacman_conf $pacman_conf_path_backup
+echo "CachyOS Repo changed"
+mv $pacman_conf_cachyos $pacman_conf
 fi
