@@ -220,6 +220,7 @@
     - linux-cachyos-bmq-zfs
     - linux-cachyos-bore-zfs
     - linux-cachyos-cacule-zfs
+    - linux-cachyos-cfs-zfs
     - linux-cachyos-pds-zfs
     - linux-cachyos-tt-zfs
 - name: "CachyOS Kernels"
@@ -234,6 +235,8 @@
     - linux-cachyos-bore-headers
     - linux-cachyos-cacule
     - linux-cachyos-cacule-headers
+    - linux-cachyos-cfs
+    - linux-cachyos-cfs-headers
     - linux-cachyos-pds
     - linux-cachyos-pds-headers
     - linux-cachyos-tt
