@@ -525,6 +525,7 @@
     - pavucontrol-qt
     - print-manager
     - qt5-translations
+    - sddm
     - xdg-utils
     - xscreensaver
     - xsettingsd
@@ -602,6 +603,7 @@
     - wayland-protocols
     - wl-clipboard
     - wofi
+    - ly
     - xorg-xhost
     - xorg-xwayland
 - name: "Xfce4"
