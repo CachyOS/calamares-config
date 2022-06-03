@@ -61,7 +61,6 @@
           - openvpn
           - ppp
           - pptpclient
-          - r8168-dkms
           - rp-pppoe
           - sshfs
           - usb_modeswitch
@@ -263,6 +262,7 @@
     - cutefish-icons
     - cutefish-qt-plugins
     - libwnck3
+    - sddm
     - xf86-input-libinput
     - xorg-xdpyinfo
     - xorg-server
@@ -376,6 +376,7 @@
   critical: true
   packages:
     - adwaita-icon-theme
+    - cachyos-gnome-settings
     - eog
     - evince
     - file-roller
