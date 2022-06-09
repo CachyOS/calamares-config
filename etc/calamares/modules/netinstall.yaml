@@ -17,7 +17,6 @@
      - cachyos-settings
      - cachyos-v3-mirrorlist
      - cachyos-zsh-config
-     - grub-hook
      - linux-cachyos
      - linux-cachyos-headers
      - mhwd-cachyos
