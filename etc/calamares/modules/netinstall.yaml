@@ -212,6 +212,7 @@
     - linux-cachyos-bore-zfs
     - linux-cachyos-cacule-zfs
     - linux-cachyos-cfs-zfs
+    - linux-cachyos-hardened-zfs
     - linux-cachyos-pds-zfs
     - linux-cachyos-tt-zfs
 - name: "CachyOS Kernels"
@@ -228,6 +229,8 @@
     - linux-cachyos-cacule-headers
     - linux-cachyos-cfs
     - linux-cachyos-cfs-headers
+    - linux-cachyos-hardened
+    - linux-cachyos-hardened-headers
     - linux-cachyos-pds
     - linux-cachyos-pds-headers
     - linux-cachyos-tt
@@ -653,14 +656,6 @@
     - xf86-input-libinput
     - xf86-video-fbdev
     - xf86-video-vesa
-- name: "Firefox and language package"
-  description: "Add firefox and language pack if possible"
-  hidden: false
-  selected: true
-  critical: false
-  packages:
-    - firefox
-    - firefox-i18n-$LOCALE
 - name: "NVIDIA Drivers"
   description: "Select them if you want to use the nvidia drivers"
   hidden: false
@@ -680,8 +675,6 @@
   critical: true
   packages:
     - cachyos-gaming-meta
-    - gamemode
-    - lib32-gamemode
 - name: "Printing-Support"
   description: "Support for printing (Cups)"
   hidden: false
