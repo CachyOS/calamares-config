@@ -148,7 +148,6 @@
           - alsa-firmware
           - alsa-plugins
           - alsa-utils
-          - easyeffects
           - gst-plugin-pipewire
           - pavucontrol
           - pipewire
