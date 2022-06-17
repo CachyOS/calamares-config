@@ -203,13 +203,6 @@
           - timeshift
           - vi
           - wget
-- name: "CachyOS - ZFS"
-  description: "Select cachyos-zfs if youre installing on a zfs filesystem!"
-  hidden: false
-  selected: false
-  critical: true
-  packages:
-    - cachyos-zfs
 - name: "CachyOS - ZFS - Kernels"
   description: "Kernel ZFS built in modules are needed for the zfs filesystem and their kernel"
   hidden: false
@@ -220,6 +213,7 @@
     - linux-cachyos-bore-zfs
     - linux-cachyos-cacule-zfs
     - linux-cachyos-cfs-zfs
+    - linux-cachyos-hardened-zfs
     - linux-cachyos-pds-zfs
     - linux-cachyos-tt-zfs
 - name: "CachyOS Kernels"
@@ -236,6 +230,8 @@
     - linux-cachyos-cacule-headers
     - linux-cachyos-cfs
     - linux-cachyos-cfs-headers
+    - linux-cachyos-hardened
+    - linux-cachyos-hardened-headers
     - linux-cachyos-pds
     - linux-cachyos-pds-headers
     - linux-cachyos-tt
