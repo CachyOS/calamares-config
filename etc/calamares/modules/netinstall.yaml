@@ -32,6 +32,26 @@
   selected: true
   critical: true
   subgroups:
+      - name: "X-system"
+        description: "Default X-system"
+        selected: true
+        packages:
+           - libwnck3
+           - mesa-utils
+           - xf86-input-libinput
+           - xorg-xdpyinfo
+           - xorg-server
+           - xorg-xinit
+           - xorg-xinput
+           - xorg-xkill
+           - xorg-xrandr
+      - name: "GPU drivers"
+        description: "Graphics hardware drivers"
+        selected: true
+        packages:
+          - xf86-video-amdgpu
+          - xf86-video-ati
+          - xf86-video-intel
       - name: "Network"
         description: "Network apps drivers and tools"
         selected: true
@@ -50,13 +70,10 @@
           - modemmanager
           - nbd
           - ndisc6
-          - net-tools
-          - netctl
           - networkmanager
           - networkmanager-openvpn
           - nmap
           - nss-mdns
-          - ntfs-3g
           - openconnect
           - openvpn
           - ppp
@@ -66,9 +83,17 @@
           - usb_modeswitch
           - vpnc
           - whois
+          - wireless-regdb
           - wireless_tools
           - wpa_supplicant
           - xl2tpd
+      - name: "firewall"
+        description: "Firewall support"
+        selected: true
+        packages:
+          - firewalld
+          - python-pyqt5
+          - python-capng
       - name: "packages management"
         description: "Packages tools"
         selected: true
@@ -87,6 +112,8 @@
         packages:
           - accountsservice
           - bash-completion
+          - bluez
+          - bluez-utils
           - ffmpegthumbnailer
           - gst-libav
           - gst-plugin-pipewire
@@ -128,19 +155,6 @@
           - ttf-dejavu
           - ttf-liberation
           - ttf-opensans
-      - name: "firewall"
-        description: "Firewall support"
-        selected: true
-        packages:
-          - firewalld
-          - python-capng
-          - python-pyqt5
-      - name: "bluetooth"
-        description: "Bluetooth support"
-        selected: true
-        packages:
-          - bluez
-          - bluez-utils
       - name: "audio"
         description: "Audio handling tools apps and libs"
         selected: true
@@ -151,12 +165,11 @@
           - easyeffects
           - gst-plugin-pipewire
           - pavucontrol
-          - pipewire
+          - pipewire-pulse
+          - wireplumber
           - pipewire-alsa
           - pipewire-jack
-          - pipewire-pulse
-          - pipewire-zeroconf
-          - pipewire-media-session
+          - rtkit
       - name: "hardware"
         description: "Hardware support libs and firmware"
         selected: true
@@ -315,6 +328,8 @@
   packages:
     - ark
     - audiocd-kio
+    - bluedevil
+    - breeze-gtk
     - cachyos-nord-kde-theme-git
     - cachyos-lavender-kde-theme-git
     - cachyos-iridescent-kde
@@ -323,8 +338,11 @@
     - egl-wayland
     - konsole
     - kate
+    - kdeconnect
     - kscreen
     - kde-gtk-config
+    - khotkeys
+    - kinfocenter
     - kinit
     - kinfocenter
     - khotkeys
