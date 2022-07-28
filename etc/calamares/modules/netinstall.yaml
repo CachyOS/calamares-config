@@ -6,6 +6,7 @@
   packages:
      - alacritty
      - btop
+     - cachyos
      - cachy-browser
      - cachyos-fish-config
      - cachyos-hello
@@ -14,6 +15,7 @@
      - cachyos-keyring
      - cachyos-mirrorlist
      - cachyos-rate-mirrors
+     - cachyos-packageinstaller
      - cachyos-settings
      - cachyos-v3-mirrorlist
      - cachyos-zsh-config
