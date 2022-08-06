@@ -512,12 +512,14 @@
   expanded: false
   critical: true
   packages:
-    - wayfire
-    - wayfire-plugins-extra
-    - wf-config
-    - wf-shell
-    - wf-recorder
-    - nwg-drawer
+    - cachyos-wayfire-settings
+    - wayfire-desktop-git
+    - egl-wayland
+    - wayland-protocols
+    - wofi
+    - ly
+    - xorg-xhost
+    - xorg-xwayland
 - name: "LXQT-Desktop"
   description: "The Lightweight Qt Desktop Environment."
   hidden: false
@@ -616,9 +618,7 @@
     - waybar
     - wl-clipboard
     - egl-wayland
-    - waybar
     - wayland-protocols
-    - wl-clipboard
     - wofi
     - ly
     - xorg-xhost
