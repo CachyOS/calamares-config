@@ -23,14 +23,22 @@ Rectangle {
     id: sideBar;
     color: Branding.styleString( Branding.SidebarBackground );
     height: 38;
-    width: parent.width
+    width: parent.width;
 
     RowLayout {
         anchors.fill: parent;
         spacing: 2;
-
-        Item {
-            Layout.fillHeight: true;
+        
+        Image {
+            Layout.leftMargin: 12;
+            Layout.rightMargin: 12;
+            Layout.alignment: Qt.AlignCenter;
+            id: logo;
+            width: 30;
+            height: width;  // square
+            source: "file:/" + Branding.imagePath(Branding.ProductLogo);
+            sourceSize.width: width;
+            sourceSize.height: height;
         }
 
         Repeater {
@@ -47,13 +55,47 @@ Rectangle {
                 Text {
                     anchors.verticalCenter: parent.verticalCenter;
                     anchors.horizontalCenter: parent.horizontalCenter;
-                    //x: parent.x + 12;
+                    x: parent.x + 12;
                     color: Branding.styleString( index == ViewManager.currentStepIndex ? Branding.SidebarTextSelected : Branding.SidebarText );
+                    
                     text: display;
                     font.weight: (index == ViewManager.currentStepIndex ? Font.Bold : Font.Normal);
                     font.pointSize : (index == ViewManager.currentStepIndex ? 10 : 9);
                 }
             }
         }
+        
+        Item {
+            Layout.fillHeight: true;
+        }
+
+        /*Rectangle {
+            id: debugArea;
+            Layout.rightMargin: (debug.enabled) ? 8 : 0;
+            Layout.bottomMargin: (debug.enabled) ? 18 : 0;
+            Layout.fillWidth: true;
+            Layout.alignment: Qt.AlignCenter;
+            height: 32;
+            //width: parent.width;
+            color: Branding.styleString( debug.enabled ? Branding.SidebarTextHighlight : Branding.SidebarBackground );
+            visible: debug.enabled;
+
+            MouseArea {
+                id: mouseAreaDebug;
+                anchors.fill: parent;
+                cursorShape: Qt.PointingHandCursor;
+                hoverEnabled: true;
+
+                Text {
+                    anchors.verticalCenter: parent.verticalCenter;
+                    anchors.horizontalCenter: parent.horizontalCenter;
+                    text: qsTr("Debug");
+                    color: Branding.styleString( Branding.SidebarTextSelected );
+                    font.pointSize: 9;
+                }
+
+                onClicked: debug.toggle();
+            }
+        }*/
     }
 }
