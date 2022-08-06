@@ -511,12 +511,14 @@
   expanded: false
   critical: true
   packages:
-    - wayfire
-    - wayfire-plugins-extra
-    - wf-config
-    - wf-shell
-    - wf-recorder
-    - nwg-drawer
+    - cachyos-wayfire-settings
+    - wayfire-desktop-git
+    - egl-wayland
+    - wayland-protocols
+    - wofi
+    - ly
+    - xorg-xhost
+    - xorg-xwayland
 - name: "LXQT-Desktop"
   description: "The Lightweight Qt Desktop Environment."
   hidden: false
@@ -615,9 +617,7 @@
     - waybar
     - wl-clipboard
     - egl-wayland
-    - waybar
     - wayland-protocols
-    - wl-clipboard
     - wofi
     - ly
     - xorg-xhost
@@ -677,6 +677,14 @@
     - xf86-input-libinput
     - xf86-video-fbdev
     - xf86-video-vesa
+- name: "Firefox and language package"
+  description: "Add firefox and language pack if possible"
+  hidden: false
+  selected: true
+  critical: false
+  packages:
+    - firefox
+    - firefox-i18n-$LOCALE
 - name: "NVIDIA Drivers"
   description: "Select them if you want to use the nvidia drivers"
   hidden: false
@@ -696,6 +704,8 @@
   critical: true
   packages:
     - cachyos-gaming-meta
+    - gamemode
+    - lib32-gamemode
 - name: "Printing-Support"
   description: "Support for printing (Cups)"
   hidden: false
