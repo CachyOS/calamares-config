@@ -22,14 +22,14 @@ import QtQuick.Controls 2.15
 Rectangle {
     id: sideBar;
     color: Branding.styleString( Branding.SidebarBackground );
-    height: 48;
+    height: 38;
     width: parent.width
 
     RowLayout {
         anchors.fill: parent;
         spacing: 2;
-        
-	Item {
+
+        Item {
             Layout.fillHeight: true;
         }
 
@@ -37,20 +37,21 @@ Rectangle {
             model: ViewManager
             Rectangle {
                 Layout.leftMargin: 6;
+                Layout.rightMargin: 6;
                 Layout.fillWidth: true;
                 Layout.alignment: Qt.AlignCenter;
-                height: 42;
-                radius: 0;
-                color: Branding.styleString( index == ViewManager.currentStepIndex ? Branding.SidebarBackgroundCurrent : Branding.SidebarBackground );
+                height: 32;
+                radius: 6;
+                color: Branding.styleString( index == ViewManager.currentStepIndex ? Branding.SidebarBackgroundSelected : Branding.SidebarBackground );
 
                 Text {
                     anchors.verticalCenter: parent.verticalCenter;
                     anchors.horizontalCenter: parent.horizontalCenter;
-                    x: parent.x + 12;
-                    color: Branding.styleString( index == ViewManager.currentStepIndex ? Branding.SidebarTextCurrent : Branding.SidebarText );
+                    //x: parent.x + 12;
+                    color: Branding.styleString( index == ViewManager.currentStepIndex ? Branding.SidebarTextSelected : Branding.SidebarText );
                     text: display;
                     font.weight: (index == ViewManager.currentStepIndex ? Font.Bold : Font.Normal);
-		    font.pointSize : (index == ViewManager.currentStepIndex ? 10 : 9);
+                    font.pointSize : (index == ViewManager.currentStepIndex ? 10 : 9);
                 }
             }
         }
