@@ -251,9 +251,9 @@ def find_initcpio_features(partitions, root_mount_point):
 
     if swap_uuid != "":
         if not uses_systemd:
-            hooks.extend(["resume"])
+            hooks.append("resume")
         if encrypt_hook and openswap_hook:
-            hooks.extend(["openswap"])
+            hooks.append("openswap")
 
     if uses_btrfs:
         modules.append("crc32c-intel" if cpuinfo().is_intel else "crc32c")
