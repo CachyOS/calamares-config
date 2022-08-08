@@ -195,8 +195,6 @@ def find_initcpio_features(partitions, root_mount_point):
             hooks.append("plymouth")
 
     for partition in partitions:
-        hooks.extend(["filesystems"])
-
         if partition["fs"] == "linuxswap" and not partition.get("claimed", None):
             # Skip foreign swap
             continue
@@ -224,6 +222,8 @@ def find_initcpio_features(partitions, root_mount_point):
 
         if partition["mountPoint"] == "/usr" and not uses_systemd:
             hooks.append("usr")
+
+    hooks.append("filesystems")
 
     if encrypt_hook:
         if uses_plymouth and unencrypted_separate_boot:
