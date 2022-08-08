@@ -17,6 +17,7 @@ import os
 from collections import OrderedDict
 
 import gettext
+
 _ = gettext.translation("calamares-python",
                         localedir=libcalamares.utils.gettext_path(),
                         languages=libcalamares.utils.gettext_languages(),
@@ -37,6 +38,16 @@ def detect_plymouth():
     return target_env_call(["sh", "-c", "which plymouth"]) == 0
 
 
+def detect_systemd():
+    """
+    Checks existence (runnability) of systemd in the target system.
+
+    @return True if systemd exists in the target, False otherwise
+    """
+    # Used to only check existence of path /usr/bin/systemd-cat in target
+    return target_env_call(["sh", "-c", "which systemd-cat"]) == 0
+
+
 class cpuinfo(object):
     """
     Object describing the current CPU's characteristics. It may be
@@ -48,6 +59,7 @@ class cpuinfo(object):
         - number_of_cores
     It is possible for both is_* fields to be False.
     """
+
     def __init__(self):
         self.is_intel = False
         self.is_amd = False
@@ -143,9 +155,8 @@ def find_initcpio_features(partitions, root_mount_point):
 
     :return 3-tuple of lists
     """
+
     hooks = [
-        "base",
-        "udev",
         "autodetect",
         "modconf",
         "block",
@@ -153,6 +164,15 @@ def find_initcpio_features(partitions, root_mount_point):
         "keymap",
         "consolefont",
     ]
+
+    uses_systemd = detect_systemd()
+
+    if uses_systemd:
+        hooks.insert(0, "systemd")
+    else:
+        hooks.insert(0, "udev")
+        hooks.insert(0, "base")
+
     modules = []
     files = []
 
@@ -163,10 +183,14 @@ def find_initcpio_features(partitions, root_mount_point):
     encrypt_hook = False
     openswap_hook = False
     unencrypted_separate_boot = False
+    uses_plymouth = detect_plymouth()
 
     # It is important that the plymouth hook comes before any encrypt hook
-    if detect_plymouth():
-        hooks.append("plymouth")
+    if uses_plymouth:
+        if uses_systemd:
+            hooks.append("sd-plymouth")
+        else:
+            hooks.append("plymouth")
 
     for partition in partitions:
         hooks.extend(["filesystems"])
@@ -200,15 +224,21 @@ def find_initcpio_features(partitions, root_mount_point):
             hooks.append("usr")
 
     if encrypt_hook:
-        if detect_plymouth() and unencrypted_separate_boot:
-            hooks.append("plymouth-encrypt")
+        if uses_plymouth and unencrypted_separate_boot:
+            if uses_systemd:
+                hooks.append("sd-encrypt")
+            else:
+                hooks.append("plymouth-encrypt")
         else:
-            hooks.append("encrypt")
+            if uses_systemd:
+                hooks.append("sd-encrypt")
+            else:
+                hooks.append("encrypt")
         crypto_file = "crypto_keyfile.bin"
         if not unencrypted_separate_boot and \
-           os.path.isfile(
-               os.path.join(root_mount_point, crypto_file)
-               ):
+                os.path.isfile(
+                    os.path.join(root_mount_point, crypto_file)
+                ):
             files.append(f"/{crypto_file}")
 
     if uses_lvm2:
