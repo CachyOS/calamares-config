@@ -218,6 +218,7 @@
           - timeshift
           - vi
           - wget
+          - ripgrep
 - name: "CachyOS - ZFS - Kernels"
   description: "Kernel ZFS built in modules are needed for the zfs filesystem and their kernel"
   hidden: false
