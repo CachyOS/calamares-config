@@ -11,12 +11,12 @@
 #
 #   Calamares is Free Software: see the License-Identifier above.
 #
-import libcalamares
-from libcalamares.utils import debug, target_env_call
+import gettext
 import os
 from collections import OrderedDict
 
-import gettext
+import libcalamares
+from libcalamares.utils import target_env_call
 
 _ = gettext.translation("calamares-python",
                         localedir=libcalamares.utils.gettext_path(),
@@ -168,7 +168,6 @@ def find_initcpio_features(partitions, root_mount_point):
     if uses_systemd:
         hooks.insert(0, "systemd")
         hooks.append("sd-vconsole")
-
     else:
         hooks.insert(0, "udev")
         hooks.insert(0, "base")
@@ -237,6 +236,7 @@ def find_initcpio_features(partitions, root_mount_point):
             else:
                 hooks.append("encrypt")
         crypto_file = "crypto_keyfile.bin"
+
         if not unencrypted_separate_boot and \
                 os.path.isfile(
                     os.path.join(root_mount_point, crypto_file)
