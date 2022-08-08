@@ -17,6 +17,7 @@ import os
 from collections import OrderedDict
 
 import gettext
+
 _ = gettext.translation("calamares-python",
                         localedir=libcalamares.utils.gettext_path(),
                         languages=libcalamares.utils.gettext_languages(),
@@ -48,6 +49,7 @@ class cpuinfo(object):
         - number_of_cores
     It is possible for both is_* fields to be False.
     """
+
     def __init__(self):
         self.is_intel = False
         self.is_amd = False
@@ -143,6 +145,7 @@ def find_initcpio_features(partitions, root_mount_point):
 
     :return 3-tuple of lists
     """
+
     hooks = [
         "base",
         "udev",
@@ -206,9 +209,9 @@ def find_initcpio_features(partitions, root_mount_point):
             hooks.append("encrypt")
         crypto_file = "crypto_keyfile.bin"
         if not unencrypted_separate_boot and \
-           os.path.isfile(
-               os.path.join(root_mount_point, crypto_file)
-               ):
+                os.path.isfile(
+                    os.path.join(root_mount_point, crypto_file)
+                ):
             files.append(f"/{crypto_file}")
 
     if uses_lvm2:
