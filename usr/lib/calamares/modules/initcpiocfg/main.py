@@ -161,17 +161,19 @@ def find_initcpio_features(partitions, root_mount_point):
         "modconf",
         "block",
         "keyboard",
-        "keymap",
-        "consolefont",
     ]
 
     uses_systemd = detect_systemd()
 
     if uses_systemd:
         hooks.insert(0, "systemd")
+        hooks.append("sd-vconsole")
+
     else:
         hooks.insert(0, "udev")
         hooks.insert(0, "base")
+        hooks.append("keymap")
+        hooks.append("consolefont")
 
     modules = []
     files = []
