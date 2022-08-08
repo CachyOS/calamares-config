@@ -250,7 +250,8 @@ def find_initcpio_features(partitions, root_mount_point):
         hooks.append("zfs")
 
     if swap_uuid != "":
-        hooks.extend(["resume"])
+        if not uses_systemd:
+            hooks.extend(["resume"])
         if encrypt_hook and openswap_hook:
             hooks.extend(["openswap"])
 
