@@ -222,7 +222,7 @@ def find_initcpio_features(partitions, root_mount_point):
         if partition["mountPoint"] == "/boot" and "luksMapperName" not in partition:
             unencrypted_separate_boot = True
 
-        if partition["mountPoint"] == "/usr":
+        if partition["mountPoint"] == "/usr" and not uses_systemd:
             hooks.append("usr")
 
     if encrypt_hook:
