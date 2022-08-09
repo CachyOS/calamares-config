@@ -257,6 +257,7 @@ def find_initcpio_features(partitions, root_mount_point):
 
     if uses_btrfs:
         modules.append("crc32c-intel" if cpuinfo().is_intel else "crc32c")
+        hooks.append("btrfs")
     else:
         hooks.append("fsck")
 
