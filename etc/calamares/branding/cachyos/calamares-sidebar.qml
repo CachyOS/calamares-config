@@ -53,12 +53,16 @@ Rectangle {
                 color: Branding.styleString( index == ViewManager.currentStepIndex ? Branding.SidebarBackgroundSelected : Branding.SidebarBackground );
 
                 Text {
+                    horizontalAlignment: Text.AlignHCenter; 
+                    verticalAlignment: Text.AlignVCenter; 
                     anchors.verticalCenter: parent.verticalCenter;
                     anchors.horizontalCenter: parent.horizontalCenter;
                     x: parent.x + 12;
                     color: Branding.styleString( index == ViewManager.currentStepIndex ? Branding.SidebarTextSelected : Branding.SidebarText );
                     
                     text: display;
+                    width: parent.width;
+                    wrapMode: Text.WordWrap;
                     font.weight: (index == ViewManager.currentStepIndex ? Font.Bold : Font.Normal);
                     font.pointSize : (index == ViewManager.currentStepIndex ? 10 : 9);
                 }
