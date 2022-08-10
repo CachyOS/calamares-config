@@ -445,6 +445,7 @@
   selected: false
   critical: true
   packages:
+    - cachyos-openbox-settings
     - obconf
     - libwnck3
     - acpi
