@@ -97,8 +97,6 @@ class MhwdController:
 
     def run(self):
         for b in self.bus:
-            for id in self.identifier['net']:
-                    self.configure(b, id)
             for id in self.identifier['video']:
                     self.configure(b, id)
 
