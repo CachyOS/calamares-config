@@ -113,8 +113,7 @@
         packages:
           - accountsservice
           - bash-completion
-          - bluez
-          - bluez-utils
+          - bluetooth-support
           - ffmpegthumbnailer
           - gst-libav
           - gst-plugin-pipewire
