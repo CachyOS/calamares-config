@@ -78,7 +78,7 @@ windowPlacement: center
 # to putting the sidebar on the left. Also valid is "qml,top".
 # While "widget,top" is valid, the widgets code is **not** flexible
 # and results will be terrible.
-sidebar: widget
+sidebar: qml,bottom
 
 # Kind of navigation (button panel on the bottom).
 #  - "widget" or unset, use traditional navigation
