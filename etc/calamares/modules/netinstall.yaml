@@ -6,6 +6,7 @@
   packages:
      - alacritty
      - btop
+     - cachyos
      - cachy-browser
      - cachyos-fish-config
      - cachyos-hello
@@ -14,6 +15,7 @@
      - cachyos-keyring
      - cachyos-mirrorlist
      - cachyos-rate-mirrors
+     - cachyos-packageinstaller
      - cachyos-settings
      - cachyos-v3-mirrorlist
      - cachyos-zsh-config
@@ -112,8 +114,7 @@
         packages:
           - accountsservice
           - bash-completion
-          - bluez
-          - bluez-utils
+          - bluetooth-support
           - ffmpegthumbnailer
           - gst-libav
           - gst-plugin-pipewire
@@ -147,6 +148,7 @@
           - adobe-source-han-sans-cn-fonts
           - adobe-source-han-sans-jp-fonts
           - adobe-source-han-sans-kr-fonts
+          - noto-fonts-emoji
           - cantarell-fonts
           - freetype2
           - noto-fonts
@@ -216,6 +218,7 @@
           - timeshift
           - vi
           - wget
+          - ripgrep
 - name: "CachyOS - ZFS - Kernels"
   description: "Kernel ZFS built in modules are needed for the zfs filesystem and their kernel"
   hidden: false
@@ -441,6 +444,7 @@
   selected: false
   critical: true
   packages:
+    - cachyos-openbox-settings
     - obconf
     - libwnck3
     - acpi
@@ -509,12 +513,14 @@
   expanded: false
   critical: true
   packages:
-    - wayfire
-    - wayfire-plugins-extra
-    - wf-config
-    - wf-shell
-    - wf-recorder
-    - nwg-drawer
+    - cachyos-wayfire-settings
+    - wayfire-desktop-git
+    - egl-wayland
+    - wayland-protocols
+    - wofi
+    - ly
+    - xorg-xhost
+    - xorg-xwayland
 - name: "LXQT-Desktop"
   description: "The Lightweight Qt Desktop Environment."
   hidden: false
@@ -613,9 +619,7 @@
     - waybar
     - wl-clipboard
     - egl-wayland
-    - waybar
     - wayland-protocols
-    - wl-clipboard
     - wofi
     - ly
     - xorg-xhost
