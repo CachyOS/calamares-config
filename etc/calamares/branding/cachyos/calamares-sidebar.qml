@@ -50,7 +50,7 @@ Rectangle {
                 Layout.alignment: Qt.AlignCenter;
                 height: 32;
                 radius: 6;
-                color: Branding.styleString( index == ViewManager.currentStepIndex ? Branding.SidebarBackgroundSelected : Branding.SidebarBackground );
+                color: Branding.styleString( index == ViewManager.currentStepIndex ? Branding.SidebarBackgroundCurrent : Branding.SidebarBackground );
 
                 Text {
                     horizontalAlignment: Text.AlignHCenter; 
@@ -58,7 +58,7 @@ Rectangle {
                     anchors.verticalCenter: parent.verticalCenter;
                     anchors.horizontalCenter: parent.horizontalCenter;
                     x: parent.x + 12;
-                    color: Branding.styleString( index == ViewManager.currentStepIndex ? Branding.SidebarTextSelected : Branding.SidebarText );
+                    color: Branding.styleString( index == ViewManager.currentStepIndex ? Branding.SidebarTextCurrent : Branding.SidebarText );
                     
                     text: display;
                     width: parent.width;
