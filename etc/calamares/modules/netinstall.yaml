@@ -698,15 +698,6 @@
     - nvidia-settings
     - lib32-opencl-nvidia
     - opencl-nvidia
-- name: "cachyos-gaming-meta"
-  description: "Install needed packages for a instant gaming enviroment"
-  hidden: false
-  selected: false
-  critical: true
-  packages:
-    - cachyos-gaming-meta
-    - gamemode
-    - lib32-gamemode
 - name: "Printing-Support"
   description: "Support for printing (Cups)"
   hidden: false
