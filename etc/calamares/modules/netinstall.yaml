@@ -66,8 +66,6 @@
           - dnsutils
           - ethtool
           - gnu-netcat
-          - ipw2100-fw
-          - ipw2200-fw
           - iwd
           - modemmanager
           - nbd
