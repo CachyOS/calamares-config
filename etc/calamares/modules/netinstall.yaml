@@ -204,7 +204,7 @@
           - meld
           - nano-syntax-highlighting
           - neofetch
-          - fastfetch-git
+          - fastfetch
           - pcurses
           - pv
           - python-defusedxml
