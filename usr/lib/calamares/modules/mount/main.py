@@ -265,6 +265,7 @@ def mount_partition(root_mount_point, partition, partitions, mount_options, moun
                                     fstype,
                                     mount_options_string) != 0:
             libcalamares.utils.warning("Cannot mount {}".format(device))
+        mount_options_list.append({"mountpoint": raw_mount_point, "option_string": mount_options_string})
 
     # Special handling for btrfs subvolumes. Create the subvolumes listed in mount.conf
     if fstype == "btrfs" and partition["mountPoint"] == '/':
@@ -293,21 +294,18 @@ def mount_partition(root_mount_point, partition, partitions, mount_options, moun
         # Mount the subvolumes
         swap_subvol = libcalamares.job.configuration.get("btrfsSwapSubvol", "/@swap")
         for s in btrfs_subvolumes:
-            mount_option = "subvol={}".format(s['subvolume'])
             if s['subvolume'] == swap_subvol:
-                mount_option += "," + get_mount_options("btrfs_swap", mount_options, partition)
+                mount_option_no_subvol = get_mount_options("btrfs_swap", mount_options, partition)
             else:
-                mount_option += "," + get_mount_options(fstype, mount_options, partition)
+                mount_option_no_subvol = get_mount_options(fstype, mount_options, partition)
+            mount_option = f"subvol={s['subvolume']},{mount_option_no_subvol}"
             subvolume_mountpoint = mount_point[:-1] + s['mountPoint']
-            mount_options_list.append({"mountpoint": s['mountPoint'], "option_string": mount_option})
+            mount_options_list.append({"mountpoint": s['mountPoint'], "option_string": mount_option_no_subvol})
             if libcalamares.utils.mount(device,
                                         subvolume_mountpoint,
                                         fstype,
                                         mount_option) != 0:
                 libcalamares.utils.warning("Cannot mount {}".format(device))
-    else:
-        if fstype != "zfs":
-            mount_options_list.append({"mountpoint": raw_mount_point, "option_string": mount_options_string})
 
 
 def run():
@@ -352,6 +350,9 @@ def run():
             mount_partition(root_mount_point, partition, partitions, mount_options, mount_options_list)
     except ZfsException as ze:
         return _("zfs mounting error"), ze.message
+
+    if not mount_options_list:
+        libcalamares.utils.warning("No mount options defined, {!s} partitions, {!s} mountable".format(len(partitions), len(mountable_partitions)))
 
     libcalamares.globalstorage.insert("rootMountPoint", root_mount_point)
     libcalamares.globalstorage.insert("mountOptionsList", mount_options_list)
