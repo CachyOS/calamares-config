@@ -60,30 +60,15 @@
           - b43-fwcutter
           - broadcom-wl-dkms
           - dhclient
-          - dialog
           - dnsmasq
           - dnsutils
           - ethtool
-          - gnu-netcat
           - iwd
           - modemmanager
-          - nbd
-          - ndisc6
           - networkmanager
           - networkmanager-openvpn
-          - nmap
           - nss-mdns
-          - openconnect
-          - openvpn
-          - ppp
-          - pptpclient
-          - rp-pppoe
-          - sshfs
           - usb_modeswitch
-          - vpnc
-          - whois
-          - wireless-regdb
-          - wireless_tools
           - wpa_supplicant
           - xl2tpd
       - name: "firewall"
@@ -100,10 +85,10 @@
           - libpamac-aur
           - pacman-contrib
           - pamac-aur
-          - paru
           - pkgfile
           - rebuild-detector
           - reflector
+          - paru
           - yay
       - name: "desktop integration"
         description: "Useful helper tools and libs for desktop usage"
@@ -174,11 +159,11 @@
         selected: true
         packages:
           - amd-ucode
+          - intel-ucode
           - dmidecode
           - dmraid
           - hdparm
           - hwdetect
-          - intel-ucode
           - lsscsi
           - mtools
           - sg3_utils
