@@ -602,7 +602,7 @@
     - waybar
     - wl-clipboard
     - egl-wayland
-    - wlroots-git
+    - wlroots
     - wayland-protocols
     - wofi
     - ly
