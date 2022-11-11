@@ -601,6 +601,7 @@
     - waybar
     - wl-clipboard
     - egl-wayland
+    - wlroots-git
     - wayland-protocols
     - wofi
     - ly
